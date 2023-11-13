@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="intro.css">
+    <title>About</title>
+</head>
+
+<body>
+    <header class="container">
+        <!-- Header content goes here -->
+    </header>
+
+    <section class="container">
+        <div class="main">
+            <h1>About Me</h1>
+            <p>
+                Name: Matyas Gebremedhin<br>
+                Role: React Frontend Web Developer<br><br>
+                About Me:<br>
+                I am a highly skilled React Frontend Web Developer with expertise in using Git, Node.js, and Figma design. I have a strong understanding of the Scrum approach and enjoy collaborating with colleagues and friends in an Agile development environment. Excellent communication skills allow me to effectively communicate and work with teammates, ensuring smooth project execution and successful delivery. With a passion for creating intuitive and visually appealing web experiences, I consistently strive to deliver high-quality frontend solutions that meet and exceed client expectations.<br><br>
+                I am passionate about leveraging my skills and experience to contribute to exciting frontend web development projects. I am always eager to learn and stay up-to-date with the latest technologies, ensuring that I deliver cutting-edge solutions to clients. With my dedication and expertise, I aim to provide exceptional frontend web development services and drive successful project outcomes.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+        // JavaScript code goes here
+    </script>
+</body>
+
+</html>

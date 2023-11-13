@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="intro.css">
+    <title>skill</title>
+</head>
+
+<body>
+    <header class="container">
+        <!-- Header content goes here -->
+    </header>
+
+    <section class="container">
+        <div class="main">
+            <h1>Skills</h1>
+            <p>
+                Name: Matyas Gebremedhin<br>
+                Role: React Frontend Web Developer<br><br>
+                <br>
+                I am a highly skilled React Frontend Web Developer with expertise in using Git, Node.js, and Figma design. </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="main">
+            <ul>
+                <li>React.js: Proficient in building modern and responsive user interfaces using React.js.</li>
+                <li>Node.js: Experienced in using Node.js for server-side development and building RESTful APIs.</li>
+                <li>Git: Well-versed in version control and collaborative development using Git.</li>
+                <li>Figma: Skilled in utilizing Figma design to create visually appealing and user-friendly web designs.</li>
+                <li>Agile Development: Familiar with the Scrum approach and working collaboratively in an Agile environment.</li>
+                <li>Communication: Strong communication skills to effectively collaborate with colleagues and clients.</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+        // JavaScript code goes here
+    </script>
+</body>
+
+</html>

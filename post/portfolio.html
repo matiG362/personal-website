@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="intro.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <!-- Header content goes here -->
+    </header>
+
+    <section class="container">
+        <div class="main">
+            <h1>Portfolio</h1>
+            <p>
+                Name: Matyas Gebremedhin<br>
+                Role: React Frontend Web Developer<br><br>
+                 </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="main">
+            <ul>
+                <li>
+                    <a href="https://zingy-bubblegum-8ab075.netlify.app/" target="_blank">Zingy Bubblegum Netlify App</a>
+                </li>
+                <li>
+                    <a href="https://genuine-zuccutto-0bf13a.netlify.app/" target="_blank">Genuine Zuccutto Netlify App</a>
+                </li>
+                <li>
+                    <a href="https://deft-smakager-b2612d.netlify.app/" target="_blank">Deft Smakager Netlify App</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+        // JavaScript code goes here
+    </script>
+</body>
+
+</html>
